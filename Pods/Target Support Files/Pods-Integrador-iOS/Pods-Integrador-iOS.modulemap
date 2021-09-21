@@ -1,0 +1,6 @@
+framework module Pods_Integrador_iOS {
+  umbrella header "Pods-Integrador-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
