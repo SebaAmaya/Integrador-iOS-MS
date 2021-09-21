@@ -67,7 +67,7 @@
                                         <attributedString key="attributedTitle">
                                             <fragment content="Terms and conditions">
                                                 <attributes>
-                                                    <color key="NSColor" systemColor="labelColor"/>
+                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                     <font key="NSFont" metaFont="system" size="18"/>
                                                     <integer key="NSUnderline" value="1"/>
                                                 </attributes>
@@ -146,9 +146,4 @@
             <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
         </view>
     </objects>
-    <resources>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

@@ -12,15 +12,15 @@ class CategoriesViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var categories: [Category] = [Category(name: "education"),
-                                  Category(name: "recreational"),
-                                  Category(name: "social"),
-                                  Category(name: "diy"),
-                                  Category(name: "charity") ,
-                                  Category(name: "cooking"),
-                                  Category(name: "relaxation"),
-                                  Category(name: "music"),
-                                  Category(name: "busywork")]
+    var categories: [Category] = [Category(name: "Education"),
+                                  Category(name: "Recreational"),
+                                  Category(name: "Social"),
+                                  Category(name: "Diy"),
+                                  Category(name: "Charity") ,
+                                  Category(name: "Cooking"),
+                                  Category(name: "Relaxation"),
+                                  Category(name: "Music"),
+                                  Category(name: "Busywork")]
     
     override func viewDidLoad() {
         

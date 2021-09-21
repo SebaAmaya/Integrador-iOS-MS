@@ -22,6 +22,8 @@
 		A3BBED0A26FA1CF500BE3387 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BBED0826FA1CF500BE3387 /* CategoriesViewController.swift */; };
 		A3BBED0B26FA1CF500BE3387 /* CategoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3BBED0926FA1CF500BE3387 /* CategoriesViewController.xib */; };
 		A3BBED0D26FA1D4700BE3387 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BBED0C26FA1D4700BE3387 /* Category.swift */; };
+		A3BBED1026FA551F00BE3387 /* SuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BBED0E26FA551F00BE3387 /* SuggestionViewController.swift */; };
+		A3BBED1126FA551F00BE3387 /* SuggestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3BBED0F26FA551F00BE3387 /* SuggestionViewController.xib */; };
 		F668DF2718EFC16AC1000BCF /* Pods_Integrador_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7DDF6E043580B74611FD7F7 /* Pods_Integrador_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,8 @@
 		A3BBED0826FA1CF500BE3387 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		A3BBED0926FA1CF500BE3387 /* CategoriesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesViewController.xib; sourceTree = "<group>"; };
 		A3BBED0C26FA1D4700BE3387 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		A3BBED0E26FA551F00BE3387 /* SuggestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionViewController.swift; sourceTree = "<group>"; };
+		A3BBED0F26FA551F00BE3387 /* SuggestionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestionViewController.xib; sourceTree = "<group>"; };
 		F7DDF6E043580B74611FD7F7 /* Pods_Integrador_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Integrador_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -128,6 +132,7 @@
 				A3B31A5126F94EA7006D778B /* InitialViewController.xib */,
 				A3B31A5E26F97565006D778B /* TermsAndConditionsViewController.xib */,
 				A3BBED0926FA1CF500BE3387 /* CategoriesViewController.xib */,
+				A3BBED0F26FA551F00BE3387 /* SuggestionViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 				A3B31A5026F94EA7006D778B /* InitialViewController.swift */,
 				A3B31A5D26F97565006D778B /* TermsAndConditionsViewController.swift */,
 				A3BBED0826FA1CF500BE3387 /* CategoriesViewController.swift */,
+				A3BBED0E26FA551F00BE3387 /* SuggestionViewController.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -221,6 +227,7 @@
 				A3B31A4926F94D9C006D778B /* LaunchScreen.storyboard in Resources */,
 				A3BBED0B26FA1CF500BE3387 /* CategoriesViewController.xib in Resources */,
 				A3B31A4626F94D9C006D778B /* Assets.xcassets in Resources */,
+				A3BBED1126FA551F00BE3387 /* SuggestionViewController.xib in Resources */,
 				A3B31A5326F94EA7006D778B /* InitialViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +291,7 @@
 				A3B31A5F26F97565006D778B /* TermsAndConditionsViewController.swift in Sources */,
 				A3760A3E26F97EA600547106 /* ServiceManager.swift in Sources */,
 				A3B31A5226F94EA7006D778B /* InitialViewController.swift in Sources */,
+				A3BBED1026FA551F00BE3387 /* SuggestionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
