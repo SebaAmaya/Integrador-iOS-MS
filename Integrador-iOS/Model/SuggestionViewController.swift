@@ -24,6 +24,10 @@ class SuggestionViewController: UIViewController {
 
         tryAnotherButton.layer.cornerRadius = 5
         tryAnotherButton.clipsToBounds = true
+        
+        categoryImage.isHidden = true
+        categoryLabel.isHidden = true
+        
     }
 
 

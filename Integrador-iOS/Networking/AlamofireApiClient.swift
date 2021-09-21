@@ -10,11 +10,10 @@ import Alamofire
 
 class AlamofireApiClient {
 
-    
-    func get(url: String, completion: @escaping (Result<Data?, AFError>) -> Void) {
-            AF.request(url).response { response in
-                completion(response.result) }
-        }
-    
-    
+//
+//    func get(url: String, completion: @escaping (Result<Data?, AFError>) -> Void) {
+//            AF.request(url).response { response in
+//                completion(response.result) }
+//        }
+
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class InitialViewController: UIViewController {
 
@@ -43,6 +44,15 @@ class InitialViewController: UIViewController {
     @IBAction func startButtonTapped(_ sender: Any) {
         
         presentTapBarController()
+        let request = AF.request("https://www.boredapi.com/api/activity?&price=0&participants=1&type=education")
+        request.responseJSON { (data) in
+            do {
+                let suggest = try JSONDecoder().decode(Suggestionsss.self, from: data.data!)
+                print(suggest.suggestionsArray)
+            }catch{
+                print(error)
+            }
+        }
         
     }
     

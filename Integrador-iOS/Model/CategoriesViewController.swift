@@ -26,7 +26,7 @@ class CategoriesViewController: UIViewController {
         
         super.viewDidLoad()
         self.tableView.dataSource = self
-//        self.tableView.delegate = self
+        self.tableView.delegate = self
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
 
     }
@@ -47,7 +47,13 @@ extension CategoriesViewController: UITableViewDataSource {
         cell.textLabel?.text = itemCategory
         return cell
     }
-    
-    
+}
+
+extension CategoriesViewController: UITableViewDelegate{
+     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let category = categories[indexPath.row].name
+        }
     
 }

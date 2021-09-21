@@ -12,6 +12,6 @@ class ServiceManager {
  
     let apiClient = AlamofireApiClient()
     
-    let path = ""
+    let path = "https://www.boredapi.com/api/activity"
     
 }
