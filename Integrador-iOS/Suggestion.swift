@@ -15,11 +15,9 @@ struct Suggestion: Codable {
     let type: String
     let participants: Int
     let price: Double
-    
-//    public init(from decoder: Decoder) throws {
-//        let container = try decoder.container(keyedBy: CodingKeys.self)
-//        activity = try container.decode(String.self, forKey: .activity)
-//    }
+    let link: String
+    let key: String
+    let accessibility: Double
     
     
 }

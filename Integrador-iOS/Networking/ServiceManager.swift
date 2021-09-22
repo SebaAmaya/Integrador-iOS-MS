@@ -12,17 +12,22 @@ class ServiceManager {
  
     let apiClient = AlamofireApiClient()
     
-    let path = "https://www.boredapi.com/api/activity"
     
-    func getSuggestion(completion: @escaping (Suggestion) -> Void){
-        let serviceString = "https://www.boredapi.com/api/activity?&price=0&participants=1&type=education"
+    func getSuggestion(price: Double, participants: String, activity: String?, completion: @escaping (Suggestion) -> Void){
+        
+        var serviceString = ""
+        
+        if activity != nil{
+            serviceString = "https://www.boredapi.com/api/activity?&price=" + String(price) + "&participants=" + participants + "&type=" + activity!
+        } else {
+            serviceString = "https://www.boredapi.com/api/activity?&price=" + String(price) + "&participants=" + participants
+        }
         apiClient.get(url: serviceString) { response in
             switch response {
             case .success(let data):
                 do {
                     if let data = data {
                         let suggestion = try JSONDecoder().decode(Suggestion.self, from: data)
-                        print(suggestion)
                         completion(suggestion) }
                 } catch {
                     print(error)
@@ -30,8 +35,7 @@ class ServiceManager {
             case .failure(_):
                print("")
             }
-        }
-        
+        } 
     }
     
     

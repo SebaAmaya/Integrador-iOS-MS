@@ -19,12 +19,11 @@ class SuggestionViewModel {
     }
 
 
-    func getSuggestion(completion: @escaping () -> Void) {
-        suggestionService.getSuggestion { [weak self] suggestion
+    func getSuggestion(price: Double, participants: String, activity: String?, completion: @escaping (Suggestion) -> Void) {
+        suggestionService.getSuggestion(price: price, participants: participants, activity: activity) { [weak self] suggestion
             in
             self?.suggestion = suggestion
-                completion()
+            completion(suggestion)
         }
     }
-
 }

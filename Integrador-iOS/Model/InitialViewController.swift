@@ -15,7 +15,6 @@ class InitialViewController: UIViewController {
     @IBOutlet weak var sliderBar: UISlider!
     @IBOutlet weak var priceLabel: UILabel!
     
-//    private var viewModel: SuggestionViewModel?
     
     let suggestionViewController = SuggestionViewController(nibName: "SuggestionViewController", bundle: nil)
     
@@ -26,7 +25,6 @@ class InitialViewController: UIViewController {
         startButton.clipsToBounds = true
         
         participantsTextField.addTarget(self, action:  #selector(textFieldDidChange(_:)),  for:.editingChanged )
-//        viewModel = SuggestionViewModel(suggestionServices: ServiceManager())
     }
     
     @objc func textFieldDidChange(_ sender: UITextField) {
@@ -40,16 +38,14 @@ class InitialViewController: UIViewController {
     }
 
     @IBAction func sliderBarChange(_ sender: UISlider) {
+        
         let price = String(format: "%.1f", sender.value)
         priceLabel.text = String(price)
+        
     }
     
     @IBAction func startButtonTapped(_ sender: Any) {
         
-
-//        viewModel?.getSuggestion(completion: {
-//            print("Ok")
-//        })
         presentTapBarController()
         
     }
@@ -57,20 +53,21 @@ class InitialViewController: UIViewController {
     
 
     @IBAction func termsAndConditionsTapped(_ sender: Any) {
+        
         let termsAndConditionsVC = TermsAndConditionsViewController(nibName: "TermsAndConditionsViewController", bundle: nil)
         termsAndConditionsVC.modalPresentationStyle = .fullScreen
         self.present(termsAndConditionsVC, animated: true, completion: nil)
+        
     }
     
     func presentTapBarController() {
-        let tabBarController = TabBarController()
         
+        let tabBarController = TabBarController()
         tabBarController.textExample.0 = participantsTextField.text
         tabBarController.textExample.1 = priceLabel.text
-        
         tabBarController.modalPresentationStyle = .overFullScreen
-     
         present(tabBarController, animated: true)
+    
     }
     
     
