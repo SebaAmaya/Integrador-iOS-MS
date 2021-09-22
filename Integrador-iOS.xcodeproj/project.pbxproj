@@ -12,7 +12,6 @@
 		A3760A4026FA095F00547106 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3760A3F26FA095F00547106 /* TabBarController.swift */; };
 		A3B31A3D26F94D9A006D778B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B31A3C26F94D9A006D778B /* AppDelegate.swift */; };
 		A3B31A3F26F94D9A006D778B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B31A3E26F94D9A006D778B /* SceneDelegate.swift */; };
-		A3B31A4126F94D9A006D778B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B31A4026F94D9A006D778B /* ViewController.swift */; };
 		A3B31A4626F94D9C006D778B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3B31A4526F94D9C006D778B /* Assets.xcassets */; };
 		A3B31A4926F94D9C006D778B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3B31A4726F94D9C006D778B /* LaunchScreen.storyboard */; };
 		A3B31A5226F94EA7006D778B /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B31A5026F94EA7006D778B /* InitialViewController.swift */; };
@@ -25,7 +24,7 @@
 		A3BBED1026FA551F00BE3387 /* SuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BBED0E26FA551F00BE3387 /* SuggestionViewController.swift */; };
 		A3BBED1126FA551F00BE3387 /* SuggestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3BBED0F26FA551F00BE3387 /* SuggestionViewController.xib */; };
 		A3BBED1326FA6B6700BE3387 /* Suggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BBED1226FA6B6700BE3387 /* Suggestion.swift */; };
-		A3BBED1726FA74C700BE3387 /* Suggestionsss.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BBED1626FA74C700BE3387 /* Suggestionsss.swift */; };
+		A3BBED1926FB8B0100BE3387 /* SuggestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BBED1826FB8B0100BE3387 /* SuggestionViewModel.swift */; };
 		F668DF2718EFC16AC1000BCF /* Pods_Integrador_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7DDF6E043580B74611FD7F7 /* Pods_Integrador_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +37,6 @@
 		A3B31A3926F94D9A006D778B /* Integrador-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Integrador-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3B31A3C26F94D9A006D778B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3B31A3E26F94D9A006D778B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A3B31A4026F94D9A006D778B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A3B31A4526F94D9C006D778B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3B31A4826F94D9C006D778B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A3B31A4A26F94D9C006D778B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,7 +50,7 @@
 		A3BBED0E26FA551F00BE3387 /* SuggestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionViewController.swift; sourceTree = "<group>"; };
 		A3BBED0F26FA551F00BE3387 /* SuggestionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestionViewController.xib; sourceTree = "<group>"; };
 		A3BBED1226FA6B6700BE3387 /* Suggestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suggestion.swift; sourceTree = "<group>"; };
-		A3BBED1626FA74C700BE3387 /* Suggestionsss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suggestionsss.swift; sourceTree = "<group>"; };
+		A3BBED1826FB8B0100BE3387 /* SuggestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionViewModel.swift; sourceTree = "<group>"; };
 		F7DDF6E043580B74611FD7F7 /* Pods_Integrador_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Integrador_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -112,13 +110,11 @@
 				A3B31A5826F94FBD006D778B /* Model */,
 				A3B31A3E26F94D9A006D778B /* SceneDelegate.swift */,
 				A3B31A3C26F94D9A006D778B /* AppDelegate.swift */,
-				A3B31A4026F94D9A006D778B /* ViewController.swift */,
 				A3BBED0C26FA1D4700BE3387 /* Category.swift */,
 				A3BBED1226FA6B6700BE3387 /* Suggestion.swift */,
 				A3B31A4526F94D9C006D778B /* Assets.xcassets */,
 				A3B31A4726F94D9C006D778B /* LaunchScreen.storyboard */,
 				A3B31A4A26F94D9C006D778B /* Info.plist */,
-				A3BBED1626FA74C700BE3387 /* Suggestionsss.swift */,
 			);
 			path = "Integrador-iOS";
 			sourceTree = "<group>";
@@ -146,6 +142,7 @@
 		A3B31A5726F94FA8006D778B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				A3BBED1826FB8B0100BE3387 /* SuggestionViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -287,10 +284,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3B31A4126F94D9A006D778B /* ViewController.swift in Sources */,
 				A3BBED0D26FA1D4700BE3387 /* Category.swift in Sources */,
 				A3760A4026FA095F00547106 /* TabBarController.swift in Sources */,
-				A3BBED1726FA74C700BE3387 /* Suggestionsss.swift in Sources */,
 				A3BBED0A26FA1CF500BE3387 /* CategoriesViewController.swift in Sources */,
 				A3B31A3D26F94D9A006D778B /* AppDelegate.swift in Sources */,
 				A3760A3C26F97E8900547106 /* AlamofireApiClient.swift in Sources */,
@@ -300,6 +295,7 @@
 				A3B31A5226F94EA7006D778B /* InitialViewController.swift in Sources */,
 				A3BBED1026FA551F00BE3387 /* SuggestionViewController.swift in Sources */,
 				A3BBED1326FA6B6700BE3387 /* Suggestion.swift in Sources */,
+				A3BBED1926FB8B0100BE3387 /* SuggestionViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

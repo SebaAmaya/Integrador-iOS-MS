@@ -30,6 +30,13 @@ class CategoriesViewController: UIViewController {
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
 
     }
+    
+    private func showSuggestion(for category: Category) {
+        let suggestionViewController = SuggestionViewController(nibName: "SuggestionViewController", bundle: nil)
+        suggestionViewController.title = category.name
+        navigationController?.pushViewController(suggestionViewController, animated: true)
+        
+    }
 
     
 }
@@ -53,7 +60,8 @@ extension CategoriesViewController: UITableViewDelegate{
      
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let category = categories[indexPath.row].name
+        let category = categories[indexPath.row]
+        self.showSuggestion(for: category)
         }
     
 }
