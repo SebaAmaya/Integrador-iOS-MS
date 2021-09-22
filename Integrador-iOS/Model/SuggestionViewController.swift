@@ -17,7 +17,7 @@ class SuggestionViewController: UIViewController {
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var tryAnotherButton: UIButton!
     
-    
+    var textExample: (String?,String?)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +30,22 @@ class SuggestionViewController: UIViewController {
             categoryImage.isHidden = true
             categoryLabel.isHidden = true
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        
+        participantsLabel.text = textExample.0
+        let price = Double(textExample.1!)!
+        if price == 0 {
+            priceLabel.text = "Free"
+        } else if price > 0 && price <= 0.3 {
+            priceLabel.text = "Low"
+        }else if price > 0.3 && price <= 0.6 {
+            priceLabel.text = "Medium"
+        }else {
+            priceLabel.text = "High"
+        }  
     }
 
 

@@ -15,7 +15,9 @@ class InitialViewController: UIViewController {
     @IBOutlet weak var sliderBar: UISlider!
     @IBOutlet weak var priceLabel: UILabel!
     
-    private var viewModel: SuggestionViewModel?
+//    private var viewModel: SuggestionViewModel?
+    
+    let suggestionViewController = SuggestionViewController(nibName: "SuggestionViewController", bundle: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +26,7 @@ class InitialViewController: UIViewController {
         startButton.clipsToBounds = true
         
         participantsTextField.addTarget(self, action:  #selector(textFieldDidChange(_:)),  for:.editingChanged )
-        viewModel = SuggestionViewModel(suggestionServices: ServiceManager())
+//        viewModel = SuggestionViewModel(suggestionServices: ServiceManager())
     }
     
     @objc func textFieldDidChange(_ sender: UITextField) {
@@ -39,15 +41,16 @@ class InitialViewController: UIViewController {
 
     @IBAction func sliderBarChange(_ sender: UISlider) {
         let price = String(format: "%.1f", sender.value)
-        priceLabel.text = "$\(price)"
+        priceLabel.text = String(price)
     }
     
     @IBAction func startButtonTapped(_ sender: Any) {
         
+
+//        viewModel?.getSuggestion(completion: {
+//            print("Ok")
+//        })
         presentTapBarController()
-        viewModel?.getSuggestion(completion: {
-            print("Ok")
-        })
         
     }
     
@@ -61,8 +64,12 @@ class InitialViewController: UIViewController {
     
     func presentTapBarController() {
         let tabBarController = TabBarController()
-//        tabBarController.categoriesArray = self.categoriesArray
+        
+        tabBarController.textExample.0 = participantsTextField.text
+        tabBarController.textExample.1 = priceLabel.text
+        
         tabBarController.modalPresentationStyle = .overFullScreen
+     
         present(tabBarController, animated: true)
     }
     

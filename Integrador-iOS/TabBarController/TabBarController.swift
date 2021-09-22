@@ -10,11 +10,16 @@ import UIKit
 
 class TabBarController: UITabBarController{
     
+    var textExample: (String?,String?) {
+        didSet{
+
+            setupViewControllers()
+        }
+    }
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        setupViewControllers()
         
       }
     
@@ -23,6 +28,8 @@ class TabBarController: UITabBarController{
         let firstTabImage = UIImage(systemName: "list.dash")
         let firstTab = CategoriesViewController(nibName: "CategoriesViewController", bundle: nil)
         firstTab.title = firstTabTitle
+        firstTab.textExample.0 = textExample.0
+        firstTab.textExample.1 = textExample.1
         let firstNavigationController = UINavigationController(rootViewController: firstTab)
         firstNavigationController.tabBarItem = UITabBarItem(title: firstTabTitle, image: firstTabImage, selectedImage: firstTabImage)
         
@@ -31,6 +38,8 @@ class TabBarController: UITabBarController{
         let secondTabImage = UIImage(systemName: "shuffle")
         let secondTab = SuggestionViewController(nibName: "SuggestionViewController", bundle: nil)
         secondTab.title = secondTabTitle
+        secondTab.textExample.0 = textExample.0
+        secondTab.textExample.1 = textExample.1
         let secondNavigationController = UINavigationController(rootViewController: secondTab)
         secondNavigationController.tabBarItem = UITabBarItem(title: secondTabTitle, image: secondTabImage, selectedImage: secondTabImage)
 

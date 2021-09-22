@@ -12,6 +12,8 @@ class CategoriesViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    var textExample: (String?,String?)
+    
     var categories: [Category] = [Category(name: "Education"),
                                   Category(name: "Recreational"),
                                   Category(name: "Social"),
@@ -28,17 +30,20 @@ class CategoriesViewController: UIViewController {
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
 
     }
     
     private func showSuggestion(for category: Category) {
+        
         let suggestionViewController = SuggestionViewController(nibName: "SuggestionViewController", bundle: nil)
         suggestionViewController.title = category.name
+        suggestionViewController.textExample.0 = textExample.0
+        suggestionViewController.textExample.1 = textExample.1
         navigationController?.pushViewController(suggestionViewController, animated: true)
         
     }
 
-    
 }
 
 extension CategoriesViewController: UITableViewDataSource {
