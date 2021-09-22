@@ -12,7 +12,7 @@ class SuggestionViewModel {
 
     private let suggestionService: ServiceManager
 
-    var suggestion = Suggestion()
+    var suggestion: Suggestion?
 
     init(suggestionServices: ServiceManager) {
         self.suggestionService = suggestionServices

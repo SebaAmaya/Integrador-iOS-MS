@@ -12,14 +12,14 @@ struct Suggestion: Codable {
     
     
     let activity: String
-//    let type: String
-//    let participants: Int
-//    let price: Double
+    let type: String
+    let participants: Int
+    let price: Double
     
-    public init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        activity = try container.decode(String.self, forKey: .activity)
-    }
+//    public init(from decoder: Decoder) throws {
+//        let container = try decoder.container(keyedBy: CodingKeys.self)
+//        activity = try container.decode(String.self, forKey: .activity)
+//    }
     
     
 }

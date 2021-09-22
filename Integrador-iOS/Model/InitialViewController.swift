@@ -15,6 +15,7 @@ class InitialViewController: UIViewController {
     @IBOutlet weak var sliderBar: UISlider!
     @IBOutlet weak var priceLabel: UILabel!
     
+    private var viewModel: SuggestionViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +24,7 @@ class InitialViewController: UIViewController {
         startButton.clipsToBounds = true
         
         participantsTextField.addTarget(self, action:  #selector(textFieldDidChange(_:)),  for:.editingChanged )
-  
+        viewModel = SuggestionViewModel(suggestionServices: ServiceManager())
     }
     
     @objc func textFieldDidChange(_ sender: UITextField) {
@@ -44,6 +45,9 @@ class InitialViewController: UIViewController {
     @IBAction func startButtonTapped(_ sender: Any) {
         
         presentTapBarController()
+        viewModel?.getSuggestion(completion: {
+            print("Ok")
+        })
         
     }
     
