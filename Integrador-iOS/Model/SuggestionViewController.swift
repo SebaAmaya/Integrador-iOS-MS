@@ -30,10 +30,6 @@ class SuggestionViewController: UIViewController {
             categoryImage.isHidden = true
             categoryLabel.isHidden = true
         }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        
         
         participantsLabel.text = textExample.0
         let price = Double(textExample.1!)!
@@ -47,6 +43,8 @@ class SuggestionViewController: UIViewController {
             priceLabel.text = "High"
         }  
     }
+    
+
 
 
     @IBAction func tryAnotherButtonTapped(_ sender: Any) {
